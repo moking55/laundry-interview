@@ -9,6 +9,18 @@ const router = createRouter({
       name: "home",
       component: HomeView
     },
+    {
+      path: "/washing",
+      name: "washing",
+      component: () => import("../views/WashingRoomView.vue")
+    },
+    // error
+    {
+      path: "/:pathMatch(.*)*",
+      name: "not-found",
+      redirect: { name: "home" }
+    }
+
   ]
 });
 
