@@ -52,7 +52,7 @@ export default {
         },
         {
           name: "บริการซักผ้า",
-          link: "/services"
+          link: "/washing"
         },
       ]
     };

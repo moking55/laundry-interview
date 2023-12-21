@@ -3,11 +3,19 @@
     <v-container class="h-100">
       <v-row class="align-center d-flex h-100">
         <v-col cols="12" md="8" class="text-center text-md-start">
-          <h1 class="header-title">
+          <h1 class="header-title animate__animated animate__fadeInUp">
             ให้การซักผ้าเป็นเรื่องที่<span class="text-amber-lighten-2">ง่ายสำหรับคุณ</span>
           </h1>
-          <p>บริการเครื่องซักผ้าหยอดเหรียญ ซักง่าย ซักไว แจ้งเตือนผ่านไลน์</p>
-          <v-btn flat size="large" class="mt-3 rounded-xl">
+          <p class="animate__animated animate__fadeInUp" style="animation-delay: 0.3s">
+            บริการเครื่องซักผ้าหยอดเหรียญ ซักง่าย ซักไว แจ้งเตือนผ่านไลน์
+          </p>
+          <v-btn
+            style="animation-delay: 0.3s"
+            flat
+            size="large"
+            class="animate__animated animate__fadeInUp mt-3 rounded-xl"
+            :to="{ name: 'washing' }"
+          >
             เริ่มใช้งาน
             <template v-slot:append>
               <v-icon size="large"> mdi-menu-right </v-icon>
@@ -47,22 +55,22 @@
   <v-container class="mt-8">
     <h2 class="section-header my-6">วิธีใช้ 4 ขั้นตอนง่ายๆ</h2>
     <div class="d-flex justify-space-between align-center">
-      <div>
+      <div class="animate__animated animate__fadeInLeft">
         <v-img :src="choose" height="100" class="mb-3"></v-img>
         <div>เลือกเครื่องซักผ้าที่ว่าง</div>
       </div>
       <v-icon size="x-large"> mdi-arrow-right-bold-circle </v-icon>
-      <div>
+      <div class="animate__animated animate__fadeInLeft" style="animation-delay: 0.3s">
         <v-img :src="insert_coin" height="100" class="mb-3"></v-img>
         <div>หยอดเหรียญ</div>
       </div>
       <v-icon size="x-large"> mdi-arrow-right-bold-circle </v-icon>
-      <div>
+      <div class="animate__animated animate__fadeInLeft" style="animation-delay: 0.6s">
         <v-img :src="washing_machine" height="100" class="mb-3"></v-img>
         <div>รอซักผ้าเสร็จ</div>
       </div>
       <v-icon size="x-large"> mdi-arrow-right-bold-circle </v-icon>
-      <div>
+      <div class="animate__animated animate__fadeInLeft" style="animation-delay: 0.9s">
         <v-img :src="notification" height="100" class="mb-3"></v-img>
         <div>รับการแจ้งเตือนผ่านไลน์</div>
       </div>
@@ -106,9 +114,6 @@
           src="https://www.google.com/maps/embed/v1/place?q=สะดวกซัก+Thanon+Asok+-+Din+Daeng,+Din+Daeng,+Bangkok,+Thailand&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
         ></iframe>
       </div>
-      <a class="googl-ehtml" href="https://www.bootstrapskins.com/themes" id="auth-map-data"
-        >premium bootstrap themes</a
-      >
     </div>
   </v-container>
   <div class="bg-indigo-darken-1 position-relative" style="min-height: 230px">
