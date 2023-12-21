@@ -11,6 +11,7 @@
         2.หยอดเหรียญ <v-icon> mdi-chevron-right </v-icon> 3.กดเริ่มซักผ้า
         <v-icon> mdi-chevron-right </v-icon> 4.รอรับการแจ้งเตือน
       </h3>
+      <v-btn color="green" class="mt-5" @click="hideChat = !hideChat">เปิดแอพ LINE</v-btn>
     </div>
   </div>
   <v-container>
@@ -57,20 +58,26 @@
         </div>
       </v-col>
     </v-row>
+    <LineChat :isChatHidden="hideChat" :chatData="chatMessage" />
   </v-container>
 </template>
 <script>
 import WashMachine from "@/components/WashMachine.vue";
 import coin from "@/assets/coin.png";
+import LineChat from "@/components/LineChat.vue";
 
 export default {
   name: "WashingRoomView",
   components: {
-    WashMachine
+    WashMachine,
+    LineChat
   },
   data() {
     return {
       coin,
+      notifyTime: 59, // second
+      hideChat: true,
+      chatMessage: [],
       machines: [
         {
           name: "เครื่องซักผ้า 1",
@@ -115,7 +122,10 @@ export default {
       this.machines[id].isWashing = true;
       this.machines[id].timer = setInterval(() => {
         this.machines[id].timeLeft -= 1;
-        console.log(this.machines[id].timeLeft);
+        if (this.machines[id].timeLeft === this.notifyTime) {
+          this.chatMessage.push(`เครื่องซักผ้า ${id + 1} ของคุณเหลือเวลาอีก 1 นาที โปรดเตรียมพร้อมรับผ้าของคุณ!`);
+          this.hideChat = false;
+        }
         if (this.machines[id].timeLeft <= 0) {
           this.machines[id].isWashing = false;
           this.machines[id].insertedCoin = 0;
