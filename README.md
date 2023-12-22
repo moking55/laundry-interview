@@ -1,35 +1,37 @@
 # dudee-laundry
+![Vercel](https://vercelbadge.vercel.app/api/moking55/laundry-interview?style=for-the-badge)
 
-This template should help get you started developing with Vue 3 in Vite.
+โจทย์เว็บไซต์สำหรับร้านซักผ้าออนไลน์ สร้างด้วย Vue3 สำหรับยื่นขอฝึกงานกับทางบริษัท ดูดี อินดีด จำกัด
 
-## Recommended IDE Setup
+# ฟีเจอร์
+- ลูกค้าสามารถหยอดเหรียญเข้าเครื่องซักผ้าได้
+- ลูกค้าสามารถตรวจสอบสถานะเครื่องซักผ้าที่ว่างผ่านหน้าเว็บไซต์
+- เมื่อเวลาน้อยกว่า 1 นาทีจะส่งการเจ้งเตือนไปยังไลน์เพื่อให้ลูกค้ามารับผ้า
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+# วิธีติดตั้ง
+1. ดาวน์โหลดโปรเจคนี้
+```sh
+git clone https://github.com/moking55/laundry-interview.git
+```
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
+2. ติดตั้ง dependencies ด้วย npm
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
+3. ทดสอบเปิดเซิร์ฟเวอร์ สำหรับพัฒนา
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Build Project
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+# Dependencies
+- Vue3 (Vite)
+- Vuetify
+- Vue3Lottie
+- animate.css
